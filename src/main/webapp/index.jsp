@@ -20,7 +20,7 @@
     <p class="text-gray-700 mb-6 text-lg">Please select your role to continue:</p>
 
     <div class="flex flex-col gap-6">
-        <form action="PatientSignUp.jsp" method="post" class="flex flex-col gap-4">
+        <form action="SignUp.jsp" method="post" class="flex flex-col gap-4">
             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">I am a Patient</button>
         </form>
         <form action="doctorsignup.jsp">
