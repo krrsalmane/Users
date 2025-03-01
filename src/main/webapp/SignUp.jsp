@@ -19,7 +19,7 @@
     <h1 class="text-3xl font-extra bold mb-6 text-gray-800">Patient Sign Up</h1>
     <p class="text-gray-700 mb-6 text-lg">Create your account</p>
 
-    <form action="logout" method="POST" class="flex flex-col gap-4">
+    <form action="SignUp" method="POST" class="flex flex-col gap-4">
         <input type="text" name="fullName" placeholder="Full Name" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         <input type="email" name="email" placeholder="Email" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         <input type="password" name="password" placeholder="Password" required class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
