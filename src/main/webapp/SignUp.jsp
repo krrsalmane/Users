@@ -29,7 +29,7 @@
         <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">Sign Up</button>
     </form>
 
-    <p class="mt-4 text-gray-600">Already have an account? <a href="patient-login.jsp" class="text-blue-500 hover:underline">Login</a></p>
+    <p class="mt-4 text-gray-600">Already have an account? <a href="login.jsp" class="text-blue-500 hover:underline">Login</a></p>
 </div>
 </body>
 </html>
