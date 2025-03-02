@@ -1,8 +1,6 @@
 package com.doctorrv2.Controller;
 
-
 import com.doctorrv2.DAO.UserDAO;
-
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +23,7 @@ public class loginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        // Forward to login page
         req.getRequestDispatcher("login.jsp").forward(req, resp);
     }
 
@@ -33,23 +32,20 @@ public class loginServlet extends HttpServlet {
             throws ServletException, IOException {
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-        UserDAO userDAO = new UserDAO();
+
         try {
-
-
-            if (userDAO.validateUser(email,password)){
+            if (userDAO.validateUser(email, password)) {
+                // Valid user → create session and redirect to dashboard
                 HttpSession session = req.getSession();
                 session.setAttribute("user", email);
-            }
-            else {
-                resp.setContentType("text/html");
-                resp.getWriter().println("Invalid User");
+                resp.sendRedirect("Dashbord.jsp"); // Ensure filename matches exactly
+            } else {
+                // Invalid user → return to login page with error message
+                req.setAttribute("errorMessage", "User not found. Please check your email and password.");
+                req.getRequestDispatcher("login.jsp").forward(req, resp);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new ServletException("Database error during login", e);
         }
-
     }
-
 }
-

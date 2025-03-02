@@ -2,20 +2,53 @@ package com.doctorrv2.Model;
 
 public class User {
 
-    private int Id;
-    private String FullName;
+    private int id;
+    private String fullName;
     private String email;
     private String password;
     private String phone;
-    private String Role;
-    private String Specialization;
+    private String role;
+    private String specialization;
+
+    // Default constructor
+    public User() {}
+
+    // Constructor without ID
+    public User(String fullName, String email, String password, String phone, String role, String specialization) {
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.role = role;
+        this.specialization = specialization;
+    }
+
+    // Constructor with ID
+    public User(int id, String fullName, String email, String password, String phone, String role, String specialization) {
+        this.id = id;
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.role = role;
+        this.specialization = specialization;
+    }
+
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFullName() {
-        return FullName;
+        return fullName;
     }
 
     public void setFullName(String fullName) {
-        FullName = fullName;
+        this.fullName = fullName;
     }
 
     public String getEmail() {
@@ -43,46 +76,18 @@ public class User {
     }
 
     public String getRole() {
-        return Role;
+        return role;
     }
 
     public void setRole(String role) {
-        Role = role;
+        this.role = role;
     }
 
     public String getSpecialization() {
-        return Specialization;
+        return specialization;
     }
 
     public void setSpecialization(String specialization) {
-        Specialization = specialization;
+        this.specialization = specialization;
     }
-
-    public User(String fullName, String email, String password, String phone, String role, String specialization) {
-        FullName = fullName;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-        Role = role;
-        Specialization = specialization;
-    }
-
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        Id = id;
-    }
-
-    public User(int id, String fullName, String email, String password, String phone, String role, String specialization) {
-        Id = id;
-        FullName = fullName;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-        Role = role;
-        Specialization = specialization;
-    }
-    public User() {}
 }

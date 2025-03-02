@@ -20,7 +20,8 @@ public class UserDAO {
         }
     }
 
-    public boolean validateUser (String email, String password)  throws SQLException {
+    public boolean validateUser (String email, String password)
+            throws SQLException {
         try (Connection conn = DBconnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(SELECT_USER_BY_EMAIL)) {
             ps.setString(1, email);

@@ -26,10 +26,10 @@
         <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
         <input type="text" id="specialization" name="specialization" placeholder="Specialization" class="mt-1 p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
         <input type="text" id="role" name="role" placeholder="Role" class="mt-1 p-3 border border-gray-300 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">Sign Up</button>
+        <button  type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300">Sign Up</button>
     </form>
 
-    <p class="mt-4 text-gray-600">Already have an account? <a href="login.jsp" class="text-blue-500 hover:underline">Login</a></p>
+    <p class="mt-4 text-gray-600">Already have an account? <a href="login" class="text-blue-500 hover:underline">Login</a></p>
 </div>
 </body>
 </html>
